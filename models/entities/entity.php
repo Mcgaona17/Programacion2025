@@ -1,15 +1,20 @@
-<?php
+<?php 
 
 namespace app\models\entities;
 
-class Entity{
+abstract class Entity {
 
-    public function set($prop, $value){
-        $this-> {$prop} = $value;
+abstract function all();
+abstract function save();
+abstract function update();
+abstract function delete();
+
+    public function set($prop, $value)
+    {
+        $this->{$prop} = $value;
     }
-
-    public function get($prop){
-        return $this -> {$prop};
+    public function get($prop)
+    {
+        return $this->{$prop};
     }
 }
-
